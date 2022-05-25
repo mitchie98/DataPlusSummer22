@@ -1,3 +1,3 @@
 Summer 2022 Data+ Project 6, Policy Surveillance of UHC Financing in Developing nations
 
-- we still have a lot to figure out here
+A team of students led by researchers at the Duke Center for Policy Impact in Global Health (CPIGH) will create a user-friendly interactive visualization tool to track the evolution of Universal Health Coverage (UHC) financing policies in the low- and middle-income countries. This publicly available data visualization will provide an opportunity for policymakers and researchers to conduct a quick comparative cross-country analysis and longitudinal analysis to understand the impact of different policy experiments on UHC progress in different jurisdictions. Global Health, Public Policy, Finance.
