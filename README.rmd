@@ -6,7 +6,6 @@ Things to do:
 
 Data:
 -Figure out how to automate re-encoding as UTF-8, must happen for automated data update.
--Automate code column (use a hashmap)
 -Long term: figure out how to automate pulling data out of MonQcle
 
 Map:
