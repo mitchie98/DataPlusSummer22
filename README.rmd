@@ -15,5 +15,8 @@ Map:
 -make hover information useful, maybe add links?
 -Clean up colmn names to make map more readable
 
+Organization:
+-Separate the data analysis and the actual app
+
 Everything Else:
 -everything
