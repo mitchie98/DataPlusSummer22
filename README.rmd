@@ -6,16 +6,15 @@ Things to do:
 
 Data:
 -Figure out how to automate re-encoding as UTF-8, must happen for automated data update.
--Long term: figure out how to automate pulling data out of MonQcle
+-Long term: figure out how to automate pulling data out of MonQcle, no API, if use headless browser will break when they change MonQcle.
 
 Map:
--Style page, determine layout
 -standardize color scales
 -make hover information useful, maybe add links?
--Clean up colmn names to make map more readable
+-Make map/whole page better fit
 
 Organization:
--Separate the data analysis and the actual app
+-reformat app layout with bootstrap, will make future elements easirt to organize
 
 Everything Else:
 -everything
