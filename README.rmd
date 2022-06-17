@@ -5,7 +5,8 @@ A team of students led by researchers at the Duke Center for Policy Impact in Gl
 Things to do:
 
 Data:
--Figure out how to automate pulling data out of MonQcle, no API, if use headless browser will break when they change MonQcle.
+-Figure out how to automate pulling data out of MonQcle.
+-make data script auto update csv in git
 
 Map:
 -standardize color scales
