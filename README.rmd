@@ -5,8 +5,7 @@ A team of students led by researchers at the Duke Center for Policy Impact in Gl
 Things to do:
 
 Data:
--Figure out how to automate re-encoding as UTF-8, must happen for automated data update.
--Long term: figure out how to automate pulling data out of MonQcle, no API, if use headless browser will break when they change MonQcle.
+-Figure out how to automate pulling data out of MonQcle, no API, if use headless browser will break when they change MonQcle.
 
 Map:
 -standardize color scales
