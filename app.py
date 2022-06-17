@@ -61,7 +61,8 @@ def display_map(mapDropdown):
     map_df = df
     fig = px.choropleth(map_df, locations='Code',
                         color=mapDropdown,
-                        hover_name='Name')
+                        hover_name='Name',
+                        height=600)
     fig.update_layout(
         title_text='Worldwide UHC Policy',
         geo=dict(
@@ -69,7 +70,6 @@ def display_map(mapDropdown):
             showcoastlines=False,
             showocean=True, oceancolor="LightGray",
             projection_type='equirectangular'
-            #margin=dict(t=0, b=0, l=0, r=0)
         ),
         annotations=[dict(
             x=0.55,
