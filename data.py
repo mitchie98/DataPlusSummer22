@@ -1,8 +1,8 @@
 import pandas as pd
 
 # data
-#df = pd.read_csv(r'C:\Users\hessi\PycharmProjects\App\Universal Health Coverage Policies.csv', encoding = 'utf-16', sep='\t')
-df = pd.read_csv('https://raw.githubusercontent.com/john-hession/DataPlusSummer22/main/UHC_Policies_1.csv')
+df = pd.read_csv(r'https://raw.githubusercontent.com/john-hession/DataPlusSummer22/main/Universal%20Health%20Coverage%20Policies.csv', encoding = 'utf-16', sep='\t')
+#df = pd.read_csv('https://raw.githubusercontent.com/john-hession/DataPlusSummer22/main/UHC_Policies_1.csv')
 
 # removing unnecessary columns (caution checks, etc.)
 for col in df.columns:
@@ -14,12 +14,7 @@ df = df.replace(1, True)
 df = df.replace(0, False)
 df = df.fillna('No Data')
 
-# cleans up the strings in the csv (removes [=,(), ""])
-#def clean_str(row):
-#    return row.strip('=()"')
-#cols=['disadvantagedgroups_schemes','needs_schemes','healthoutcomes_schemes', 'userfeesexemptions_schemes','priorityservicesprocess_schemes','selectionprocess_populations_schemes', 'completed']
-#for col in cols:
- #   df[col] = df[col].apply(lambda row: clean_str(row))
+
 
 # adds code column, necessary to generate map, must figure out how to automate on new data input.
 codes = {
@@ -338,6 +333,12 @@ def bin_prob(row):
 
 df['prop_binned'] = df.apply(lambda row: bin_prob(row), axis=1)
 
+def clean_str(row):
+    return row.strip('=()\"')
+# add the rest of the columns
+cols=['disadvantagedgroups_schemes','needs_schemes','healthoutcomes_schemes', 'userfeesexemptions_schemes','priorityservicesprocess_schemes','selectionprocess_populations_schemes', 'completed']
+for col in cols:
+    df[col] = df[col].apply(lambda row: clean_str(row))
 # rename columns
 df = df.rename(columns={"national_policy_threshold ": "National Policy",
                    "prepaid_services": "Prepayment Mechanisms",
@@ -346,7 +347,7 @@ df = df.rename(columns={"national_policy_threshold ": "National Policy",
                    "payments_linked": "Linked Payments",
                    "purchasing_separate": "Purchaser-Provider Separation",
                    "specifying_benefits": "Specific Benefits Package",
-                   "pointofcare_exemptions": "Point of Car Exemptions"})
+                   "pointofcare_exemptions": "Point of Care Exemptions"})
 
 
 df.to_csv('processed_UHC_data.csv')

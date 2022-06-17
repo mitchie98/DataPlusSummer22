@@ -4,7 +4,7 @@ import dash_bootstrap_components as dbc
 import pandas as pd
 
 # data
-df = pd.read_csv(r'https://raw.githubusercontent.com/john-hession/DataPlusSummer22/main/processed_UHC_data.csv')
+df = pd.read_csv(r'C:\Users\hessi\PycharmProjects\DataPlusSummer22\processed_UHC_data.csv')
 
 # Page Layout
 # ___________________________________________________________________________________________
@@ -43,7 +43,7 @@ dbc.Navbar(id='navBar',
                        'Linked Payments',
                        'Purchaser-Provider Separation',
                        'Specific Benefits Package',
-                       'Point of Car Exemptions'],
+                       'Point of Care Exemptions'],
                      'National Policy', id='mapDropdown')
     ]),
 
