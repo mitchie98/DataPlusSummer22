@@ -4,7 +4,7 @@ import dash_bootstrap_components as dbc
 import pandas as pd
 
 # data
-df = pd.read_csv(r'https://raw.githubusercontent.com/john-hession/DataPlusSummer22/main/processed_UHC_data.csv')
+df = pd.read_csv(r'https://raw.githubusercontent.com/john-hession/DataPlusSummer22/main/data/processed_UHC_data.csv')
 
 # Page Layout
 # ___________________________________________________________________________________________

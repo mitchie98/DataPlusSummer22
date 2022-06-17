@@ -1,8 +1,8 @@
 import pandas as pd
 
 # data
-df = pd.read_csv(r'https://raw.githubusercontent.com/john-hession/DataPlusSummer22/main/Universal%20Health%20Coverage%20Policies.csv', encoding = 'utf-16', sep='\t')
-#df = pd.read_csv('https://raw.githubusercontent.com/john-hession/DataPlusSummer22/main/UHC_Policies_1.csv')
+df = pd.read_csv(r'https://raw.githubusercontent.com/john-hession/DataPlusSummer22/main/data/Universal%20Health%20Coverage%20Policies.csv', encoding = 'utf-16', sep='\t')
+
 
 # removing unnecessary columns (caution checks, etc.)
 for col in df.columns:
