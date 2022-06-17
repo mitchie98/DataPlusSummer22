@@ -7,6 +7,7 @@ Things to do:
 Data:
 -Figure out how to automate pulling data out of MonQcle.
 -make data script auto update csv in git
+-this is gonna break as soon as they change the codebook.
 
 Map:
 -standardize color scales
@@ -18,3 +19,4 @@ Organization:
 
 Everything Else:
 -everything
+-make embeddable in other sites???
