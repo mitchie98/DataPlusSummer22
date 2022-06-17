@@ -18,12 +18,13 @@ app = Dash(
 # Page Layout
 
 
-app.layout = dbc.Container(
+app.layout = dbc.Container(fluid=True, children=
     html.Div(children=[
 dbc.Navbar(id='navBar',
         className='w-100',
         children=
     [
+        dbc.NavItem(dbc.NavLink("UHC Financing Policy",id='navTitle', active=True, href="#")),
         dbc.NavItem(dbc.NavLink("Map", active=True, href="#")),
         dbc.NavItem(dbc.NavLink("Compare", href="#")),
         dbc.NavItem(dbc.NavLink("Browse", href="#")),
@@ -34,8 +35,9 @@ dbc.Navbar(id='navBar',
         html.Title(id='title', children='Map')
     ]),
 
-    html.Div(id='body', children=[
-        html.P(id='infoText', children='This will be informational text about the app'),
+    html.Div(id='body',
+        children=[
+        html.P(id='infoText', children=' '),
         dcc.Dropdown(['National Policy',
                        'Prepayment Mechanisms',
                        'Fund Distribution Btwn Schemes',
