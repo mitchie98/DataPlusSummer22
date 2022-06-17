@@ -14,7 +14,7 @@ Map:
 -Make map/whole page better fit
 
 Organization:
--reformat app layout with bootstrap, will make future elements easirt to organize
+-reformat app layout with bootstrap, will make future elements easier to organize
 
 Everything Else:
 -everything
