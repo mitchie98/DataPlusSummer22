@@ -6,17 +6,22 @@ Things to do:
 
 Data:
 -Figure out how to automate pulling data out of MonQcle.
--make data script auto update csv in git
--this is gonna break as soon as they change the codebook.
+-Make data script auto update csv in git.
 
 Map:
--standardize color scales
--make hover information useful, maybe add links?
--Make map/whole page better fit
+-Standardize color scales
+-Add date slider
+  -Need to figure out how to make multiple callback functions affect the map.
+  -Need to account for nonexistent longitudinal data.
+  -Maybe reduce to year? That would make it easier, esp when mananging map of many countries.
 
 Organization:
--reformat app layout with bootstrap, will make future elements easier to organize
+-Reformat app layout with bootstrap, will make future elements and page layout easier to organize.
 
 Everything Else:
--everything
--make embeddable in other sites???
+-Everything: All the other graphics, about page, country/policy search page, comparison tool
+-Embedding in other sites??? Emdedding(easily) is a dash enterprise feature, and we don't have time to create that feature ourselves.
+-It is not possible to make something that automatically adds new codebook elements. There has to be some degree of active maintence.
+-Can someone just show me how they put the MonQcle maps in LawAtlas? That fixes the date slider and embedding problems, and the problems with getting data out of
+MonQcle.
+
