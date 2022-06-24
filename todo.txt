@@ -1,0 +1,2 @@
+add google translate function to website
+add header to dropdown titled "Financing Feature" and remove 'National Financing Policy"
