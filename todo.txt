@@ -1,2 +1,2 @@
-add google translate function to website
-add header to dropdown titled "Financing Feature" and remove 'National Financing Policy"
+add google translate function to website (Translate widget is a paid service, but I think we can get duke to pay for it)
+add header to dropdown titled "Financing Feature" and remove 'National Financing Policy" (Done)
