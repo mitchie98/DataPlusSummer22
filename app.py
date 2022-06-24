@@ -46,7 +46,7 @@ dbc.Navbar(id='navBar',
                        'Purchaser-Provider Separation',
                        'Specific Benefits Package',
                        'Point of Care Exemptions'],
-                     'National Policy', id='mapDropdown')
+                     'Financing Feature', id='mapDropdown')
     ]),
     html.P(children='Select Date'),
     dcc.Slider(0, 10, id='date-slider', marks=None, updatemode='drag',
