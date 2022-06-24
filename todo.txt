@@ -1,2 +1,23 @@
 add google translate function to website (Translate widget is a paid service, but I think we can get duke to pay for it)
 add header to dropdown titled "Financing Feature" and remove 'National Financing Policy" (Done)
+
+Data:
+-Figure out how to automate pulling data out of MonQcle.
+-Make data script auto update csv in git.
+
+Map:
+-Standardize color scales
+-Add date slider
+  -Need to figure out how to make multiple callback functions affect the map.
+  -Need to account for nonexistent longitudinal data.
+  -Maybe reduce to year? That would make it easier, esp when mananging map of many countries.
+
+Organization:
+-Reformat app layout with bootstrap, will make future elements and page layout easier to organize.
+
+Everything Else:
+-Everything: All the other graphics, about page, country/policy search page, comparison tool
+-Embedding in other sites??? Emdedding(easily) is a dash enterprise feature, and we don't have time to create that feature ourselves.
+-It is not possible to make something that automatically adds new codebook elements. There has to be some degree of active maintence.
+-Can someone just show me how they put the MonQcle maps in LawAtlas? That fixes the date slider and embedding problems, and the problems with getting data out of
+MonQcle.
