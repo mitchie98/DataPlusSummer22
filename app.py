@@ -38,7 +38,7 @@ dbc.Navbar(id='navBar',
     html.Div(id='body',
         children=[
         html.P(id='infoText', children=' '),
-        dcc.Dropdown(['National Policy',
+        dcc.Dropdown(['Financing Feature',
                        'Prepayment Mechanisms',
                        'Fund Distribution Btwn Schemes',
                        'Fragmentation Prevention',
@@ -48,6 +48,10 @@ dbc.Navbar(id='navBar',
                        'Point of Care Exemptions'],
                      'National Policy', id='mapDropdown')
     ]),
+    html.P(children='Select Date'),
+    dcc.Slider(0, 10, id='date-slider', marks=None, updatemode='drag',
+               tooltip={"placement": "bottom", "always_visible": True}),
+# problem: how to show the developement of many nation's policy at once? How to display nonexistent data?
 
     dcc.Graph(
         id='graph'

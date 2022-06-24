@@ -1,8 +1,8 @@
 import pandas as pd
 
 # data
-df = pd.read_csv(r'https://raw.githubusercontent.com/john-hession/DataPlusSummer22/main/data/Universal%20Health%20Coverage%20Policies.csv', encoding = 'utf-16', sep='\t')
-
+df = pd.read_csv(r'https://raw.githubusercontent.com/john-hession/DataPlusSummer22/main/data/Universal%20Health'
+                 r'%20Coverage%20Policies.csv', encoding='utf-16', sep='\t')
 
 # removing unnecessary columns (caution checks, etc.)
 for col in df.columns:
@@ -13,8 +13,6 @@ for col in df.columns:
 df = df.replace(1, True)
 df = df.replace(0, False)
 df = df.fillna('No Data')
-
-
 
 # adds code column, necessary to generate map, must figure out how to automate on new data input.
 codes = {
@@ -276,6 +274,7 @@ codes = {
     "Zimbabwe": "ZWE"
 }
 
+
 def findcode(row, dict):
     if row in dict:
         return dict[row]
@@ -284,6 +283,7 @@ def findcode(row, dict):
 
 
 df['Code'] = df['Name'].apply(lambda row: findcode(row, codes))
+
 
 # counts number of policies implemented from the 9 main policies defined in the codebook
 
@@ -333,21 +333,24 @@ def bin_prob(row):
 
 df['prop_binned'] = df.apply(lambda row: bin_prob(row), axis=1)
 
+
 def clean_str(row):
     return row.strip('=()\"')
+
+
 # add the rest of the columns
-cols=['disadvantagedgroups_schemes','needs_schemes','healthoutcomes_schemes', 'userfeesexemptions_schemes','priorityservicesprocess_schemes','selectionprocess_populations_schemes', 'completed']
+cols = ['disadvantagedgroups_schemes', 'needs_schemes', 'healthoutcomes_schemes', 'userfeesexemptions_schemes',
+        'priorityservicesprocess_schemes', 'selectionprocess_populations_schemes', 'completed']
 for col in cols:
     df[col] = df[col].apply(lambda row: clean_str(row))
 # rename columns
-df = df.rename(columns={"national_policy_threshold ": "National Policy",
-                   "prepaid_services": "Prepayment Mechanisms",
-                   "redistribution_pooling": "Fund Distribution Btwn Schemes",
-                   "fragmentation_pooling": "Fragmentation Prevention",
-                   "payments_linked": "Linked Payments",
-                   "purchasing_separate": "Purchaser-Provider Separation",
-                   "specifying_benefits": "Specific Benefits Package",
-                   "pointofcare_exemptions": "Point of Care Exemptions"})
-
+df = df.rename(columns={"national_policy_threshold ": "Financing Feature",
+                        "prepaid_services": "Prepayment Mechanisms",
+                        "redistribution_pooling": "Fund Distribution Btwn Schemes",
+                        "fragmentation_pooling": "Fragmentation Prevention",
+                        "payments_linked": "Linked Payments",
+                        "purchasing_separate": "Purchaser-Provider Separation",
+                        "specifying_benefits": "Specific Benefits Package",
+                        "pointofcare_exemptions": "Point of Care Exemptions"})
 
 df.to_csv('processed_UHC_data.csv')
