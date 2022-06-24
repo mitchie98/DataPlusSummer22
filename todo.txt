@@ -1,2 +1,18 @@
-add google translate function to website
-add header to dropdown titled "Financing Feature" and remove 'National Financing Policy"
+add google translate function to website (Translate widget is a paid service, but I think we can get duke to pay for it)
+add header to dropdown titled "Financing Feature" and remove 'National Financing Policy" (Done)
+
+Data:
+-Make data script auto update csv in git.
+
+Map:
+-Standardize color scales
+-Add date slider (idk if we're still doing this)
+  -Need to figure out how to make multiple callback functions affect the map.
+  -Need to account for nonexistent longitudinal data.
+  -Maybe reduce to year? That would make it easier, esp when mananging map of many countries.
+
+Organization:
+-Reformat app layout with bootstrap, will make future elements and page layout easier to organize.
+
+Everything Else:
+-Everything: All the other graphics, about page, country/policy search page, comparison tool
